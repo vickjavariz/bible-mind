@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,html}\"",
     "icons:generate": "svgr --icon --jsx-runtime automatic --ext jsx --template svgr-template.js --out-dir src/components/icons src/assets/icons"
   },
   "dependencies": {
@@ -27,10 +28,12 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
     "husky": "^9.1.7",
+    "prettier": "3.9.5",
     "vite": "^8.1.1"
   }
 }
