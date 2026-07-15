@@ -1,5 +1,5 @@
-import DockItem from '@/components/DockItem';
-import { BookOpenTextIcon, PlusIcon } from '@/components/icons';
+import DockItem from './DockItem';
+import { BookOpenTextIcon, PlusIcon } from './icons';
 
 export default function Dock() {
   const dockItems = [

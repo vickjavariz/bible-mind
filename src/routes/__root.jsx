@@ -1,6 +1,6 @@
-import Dock from '@/components/Dock';
 import { createRootRoute, Outlet, useLocation } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import Dock from '../components/Dock';
 
 export const Route = createRootRoute({
   component: RootComponent,
