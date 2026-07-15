@@ -1,6 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
-
-import { PlusIcon } from '@/components/icons';
+import { createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/verses/')({
   component: RouteComponent,
@@ -8,9 +6,9 @@ export const Route = createFileRoute('/verses/')({
 
 function RouteComponent() {
   return (
-    <div className='flex-1 flex flex-col'>
-      <h1 className='text-2xl'>My Verses</h1>
+    <>
+      <h1 className='text-xl font-bold'>My Verses</h1>
       <p className='my-auto text-center'>Add a verse to start memorizing!</p>
-    </div>
+    </>
   );
 }
