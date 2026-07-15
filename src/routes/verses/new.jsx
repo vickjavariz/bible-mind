@@ -7,7 +7,7 @@ export const Route = createFileRoute('/verses/new')({
 function RouteComponent() {
   return (
     <>
-      <h1 className='text-2xl'>New Verse</h1>
+      <h1 className='text-xl font-bold'>New Verse</h1>
 
       <Link to='/' className='mt-5'>
         Cancel
