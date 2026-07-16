@@ -1,2 +1,3 @@
-export { default as BookOpenTextIcon } from "@/components/icons/BookOpenTextIcon";
-export { default as PlusIcon } from "@/components/icons/PlusIcon";
+export { default as BibleIcon } from "./BibleIcon";
+export { default as BookOpenTextIcon } from "./BookOpenTextIcon";
+export { default as PlusIcon } from "./PlusIcon";
