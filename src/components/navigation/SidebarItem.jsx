@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router';
+import { Link } from "@tanstack/react-router";
 
 export default function SidebarItem({ item }) {
   const { to, label, icon: Icon } = item;
@@ -7,11 +7,11 @@ export default function SidebarItem({ item }) {
     <li>
       <Link
         to={to}
-        activeProps={{ className: 'menu-focus' }}
+        activeProps={{ className: "menu-focus" }}
         activeOptions={{ exact: true }}
       >
-        <Icon className='text-lg' />
-        <span className='hidden lg:block lg:pl-1'>{label}</span>
+        <Icon className="text-lg" />
+        <span className="hidden lg:block lg:pl-1">{label}</span>
       </Link>
     </li>
   );

@@ -1,19 +1,20 @@
-import { createRootRoute, Outlet, useLocation } from '@tanstack/react-router';
-import Dock from '../components/navigation/Dock';
-import Sidebar from '../components/navigation/Sidebar';
+import { Outlet, createRootRoute, useLocation } from "@tanstack/react-router";
+
+import Dock from "@/components/navigation/Dock";
+import Sidebar from "@/components/navigation/Sidebar";
 
 export const Route = createRootRoute({
   component: RootComponent,
 });
 
 function RootComponent() {
-  const pathname = useLocation({ select: location => location.pathname });
-  const displayDock = !pathname.includes('/verses/new');
+  const pathname = useLocation({ select: (location) => location.pathname });
+  const displayDock = !pathname.includes("/verses/new");
 
   return (
     <Sidebar>
-      <div className='flex flex-col min-h-dvh'>
-        <main className='flex-1 flex flex-col w-full mx-auto p-4'>
+      <div className="flex flex-col min-h-dvh">
+        <main className="flex-1 flex flex-col w-full mx-auto p-4">
           <Outlet />
         </main>
 
