@@ -1,6 +1,8 @@
 import SidebarItem from "@/components/navigation/SidebarItem";
 import { NAVIGATION_ITEMS } from "@/config/navigation";
 
+import { BibleIcon } from "../icons";
+
 export default function Sidebar({ children }) {
   const sidebarItems = NAVIGATION_ITEMS.filter((item) =>
     item.placement.includes("sidebar"),
@@ -12,10 +14,19 @@ export default function Sidebar({ children }) {
 
       <div className="drawer-content">{children}</div>
 
-      <nav className="drawer-side">
+      <nav className="drawer-side bg-base-200 border-r-base-100 border-r-2">
         <div className="flex flex-col items-start min-h-dvh">
-          <p className="hidden lg:block text-3xl p-4">Bible Mind</p>
-          <ul className="menu w-full grow md:pt-4 lg:pt-2 lg:w-64">
+          <div className="hidden lg:flex lg:items-center w-full p-6 border-b-base-100 border-b-2">
+            <div className="p-2 bg-blue-500 rounded-xl text-3xl">
+              <BibleIcon />
+            </div>
+            <div className="flex flex-col pl-3">
+              <p className="text-xl font-bold">BibleMind</p>
+              <p className="text-sm text-neutral-500">Verse Memorizer</p>
+            </div>
+          </div>
+
+          <ul className="menu w-full grow md:p-0 md:pt-4 lg:p-4 lg:w-72">
             {sidebarItems.map((item) => (
               <SidebarItem item={item} />
             ))}

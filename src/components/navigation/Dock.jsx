@@ -7,7 +7,7 @@ export default function Dock() {
   );
 
   return (
-    <nav className="dock dock-xs md:hidden">
+    <nav className="dock dock-xs bg-base-200 md:hidden">
       <div className="hidden flex-none md:block pointer-events-none"></div>
       {dockItems.map((item) => (
         <DockItem item={item} />
