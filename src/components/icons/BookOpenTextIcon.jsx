@@ -1,19 +1,19 @@
 export default function SvgBookOpenTextIcon(props) {
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='1em'
-      height='1em'
-      fill='none'
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       strokeWidth={2}
-      className='book-open-text-icon_svg__lucide book-open-text-icon_svg__lucide-book-open-text-icon book-open-text-icon_svg__lucide-book-open-text'
-      viewBox='0 0 24 24'
+      className="book-open-text-icon_svg__lucide book-open-text-icon_svg__lucide-book-open-text-icon book-open-text-icon_svg__lucide-book-open-text"
+      viewBox="0 0 24 24"
       {...props}
     >
-      <path d='M12 7v14M16 12h2M16 8h2M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3zM6 12h2M6 8h2' />
+      <path d="M12 7v14M16 12h2M16 8h2M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3zM6 12h2M6 8h2" />
     </svg>
   );
 }
