@@ -1,3 +1,4 @@
+export { default as ArrowLeftIcon } from "./ArrowLeftIcon";
 export { default as BibleIcon } from "./BibleIcon";
-export { default as BookOpenTextIcon } from "./BookOpenTextIcon";
+export { default as BookOpenIcon } from "./BookOpenIcon";
 export { default as PlusIcon } from "./PlusIcon";

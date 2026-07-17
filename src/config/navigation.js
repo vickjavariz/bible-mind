@@ -1,10 +1,10 @@
-import { BookOpenTextIcon, PlusIcon } from "@/components/icons";
+import { BookOpenIcon, PlusIcon } from "@/components/icons";
 
 export const NAVIGATION_ITEMS = [
   {
     to: "/verses",
     label: "My Verses",
-    icon: BookOpenTextIcon,
+    icon: BookOpenIcon,
     placement: ["dock", "sidebar"],
   },
   {
