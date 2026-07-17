@@ -14,10 +14,10 @@ export default function Sidebar({ children }) {
 
       <div className="drawer-content">{children}</div>
 
-      <nav className="drawer-side bg-base-200 border-r-base-100 border-r-2">
+      <nav className="drawer-side bg-base-200 border-r-base-300 border-r-2">
         <div className="flex flex-col items-start min-h-dvh">
-          <div className="hidden lg:flex lg:items-center w-full p-6 border-b-base-100 border-b-2">
-            <div className="p-2 bg-blue-500 rounded-xl text-3xl">
+          <div className="hidden lg:flex lg:items-center w-full p-6 border-b-base-300 border-b-2">
+            <div className="p-2 bg-blue-500 text-white rounded-xl text-3xl">
               <BibleIcon />
             </div>
             <div className="flex flex-col pl-3">
