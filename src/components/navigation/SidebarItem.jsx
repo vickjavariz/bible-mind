@@ -7,9 +7,10 @@ export default function SidebarItem({ item }) {
     <li>
       <Link
         to={to}
-        className="py-3 px-4"
+        className="py-3 px-4 transition duration-200 active:scale-98 hover:bg-neutral"
         activeProps={{
-          className: "menu-active rounded-lg font-bold",
+          className:
+            "menu-active rounded-lg font-bold active:scale-100 cursor-default",
         }}
         activeOptions={{ exact: true }}
       >
