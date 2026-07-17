@@ -7,8 +7,10 @@ export default function SidebarItem({ item }) {
     <li>
       <Link
         to={to}
-        className="py-3"
-        activeProps={{ className: "menu-focus" }}
+        className="py-3 px-4"
+        activeProps={{
+          className: "menu-active rounded-lg font-bold",
+        }}
         activeOptions={{ exact: true }}
       >
         <Icon className="text-xl" />
