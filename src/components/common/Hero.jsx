@@ -14,9 +14,9 @@ function HeroTitle({ children, ...props }) {
   const className = `text-5xl font-bold ${props.className || ""}`;
 
   return (
-    <h1 {...props} className={className}>
+    <h2 {...props} className={className}>
       {children}
-    </h1>
+    </h2>
   );
 }
 

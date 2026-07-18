@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { createFileRoute } from "@tanstack/react-router";
 
 import Hero from "@/components/common/Hero";
@@ -8,16 +10,20 @@ export const Route = createFileRoute("/verses/")({
 });
 
 function RouteComponent() {
+  const { t } = useTranslation(["verses", "navigation"]);
+
   return (
     <>
-      <h1 className="text-xl font-bold">My Verses</h1>
+      <h1 className="text-xl font-bold">{t("navigation:myVerses")}</h1>
 
       <Hero>
-        <Hero.Title className="text-neutral">No Verses</Hero.Title>
-        <Hero.Text>Add your first verse to start memorizing!</Hero.Text>
+        <Hero.Title className="text-neutral">
+          {t("emptyState.title")}
+        </Hero.Title>
+        <Hero.Text>{t("emptyState.description")}</Hero.Text>
         <Hero.Link to="/verses/new">
           <PlusIcon />
-          Add Verse
+          {t("emptyState.action")}
         </Hero.Link>
       </Hero>
     </>

@@ -6,6 +6,7 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import { routeTree } from "@/routeTree.gen";
 
+import "./i18n/i18n";
 import "./index.css";
 
 const router = createRouter({ routeTree });

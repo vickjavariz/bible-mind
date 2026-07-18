@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 import SidebarItem from "@/components/navigation/SidebarItem";
 import { NAVIGATION_ITEMS } from "@/config/navigation";
 
 import { BibleIcon } from "../icons";
 
 export default function Sidebar({ children }) {
+  const { t } = useTranslation("navigation");
+
   const sidebarItems = NAVIGATION_ITEMS.filter((item) =>
     item.placement.includes("sidebar"),
   );
@@ -22,7 +26,7 @@ export default function Sidebar({ children }) {
             </div>
             <div className="flex flex-col pl-3">
               <p className="text-xl font-bold">BibleMind</p>
-              <p className="text-sm text-neutral-500">Verse Memorizer</p>
+              <p className="text-sm text-neutral-500">{t("logo.subtitle")}</p>
             </div>
           </div>
 

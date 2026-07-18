@@ -1,15 +1,16 @@
 import { BookOpenIcon, PlusIcon } from "@/components/icons";
+import i18n from "@/i18n/i18n";
 
 export const NAVIGATION_ITEMS = [
   {
     to: "/verses",
-    label: "My Verses",
+    label: i18n.t("navigation:myVerses"),
     icon: BookOpenIcon,
     placement: ["dock", "sidebar"],
   },
   {
     to: "/verses/new",
-    label: "Add Verse",
+    label: i18n.t("navigation:addVerse"),
     icon: PlusIcon,
     placement: ["dock"],
   },
