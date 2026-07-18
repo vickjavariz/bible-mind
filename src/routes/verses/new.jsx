@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { createFileRoute, useRouter } from "@tanstack/react-router";
 
 import { ArrowLeftIcon } from "@/components/icons";
@@ -7,6 +9,7 @@ export const Route = createFileRoute("/verses/new")({
 });
 
 function RouteComponent() {
+  const { t } = useTranslation(["verses", "navigation"]);
   const router = useRouter();
 
   return (
@@ -19,7 +22,7 @@ function RouteComponent() {
         >
           <ArrowLeftIcon className="text-3xl" />
         </button>
-        <h1 className="text-xl ml-4">New Verse</h1>
+        <h1 className="text-xl ml-4">{t("navigation:addVerse")}</h1>
       </div>
     </>
   );
