@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 import SidebarItem from "@/components/navigation/SidebarItem";
@@ -5,7 +6,11 @@ import { NAVIGATION_ITEMS } from "@/config/navigation";
 
 import { BibleIcon } from "../icons";
 
-export default function Sidebar({ children }) {
+interface SidebarProps {
+  children: ReactNode;
+}
+
+export default function Sidebar({ children }: SidebarProps) {
   const { t } = useTranslation("navigation");
 
   const sidebarItems = NAVIGATION_ITEMS.filter((item) =>
