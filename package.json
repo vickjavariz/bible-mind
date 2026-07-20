@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",
@@ -41,6 +41,7 @@
     "husky": "^9.1.7",
     "prettier": "3.9.5",
     "tailwindcss": "^4.3.2",
+    "typescript": "^7.0.2",
     "vite": "^8.1.1"
   }
 }
