@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
-export default function SidebarItem({ item }) {
+import type { NavigationItem } from "@/config/navigation";
+
+interface SidebarItemProps {
+  item: NavigationItem;
+}
+
+export default function SidebarItem({ item }: SidebarItemProps) {
   const { to, label, icon: Icon } = item;
 
   return (

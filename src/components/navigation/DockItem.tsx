@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
-export default function DockItem({ item }) {
+import type { NavigationItem } from "@/config/navigation";
+
+interface DockItemProps {
+  item: NavigationItem;
+}
+
+export default function DockItem({ item }: DockItemProps) {
   const { to, icon: Icon } = item;
 
   return (
