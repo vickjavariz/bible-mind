@@ -1,4 +1,6 @@
-export default function SvgBookOpenIcon(props) {
+import type { SVGProps } from "react";
+
+export default function SvgBookOpenIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

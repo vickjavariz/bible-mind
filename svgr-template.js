@@ -1,10 +1,13 @@
-export default function template(variables, { tpl }) {
+export default function template(
+  { imports, componentName, props, jsx },
+  { tpl },
+) {
   return tpl`
-${variables.imports};
+${imports};
 
-export default function ${variables.componentName}(${variables.props}) {
+export default function ${componentName}(${props}) {
   return (
-    ${variables.jsx}
+    ${jsx}
   );
 }
 `;

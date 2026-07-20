@@ -1,4 +1,6 @@
-export default function SvgArrowLeftIcon(props) {
+import type { SVGProps } from "react";
+
+export default function SvgArrowLeftIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
