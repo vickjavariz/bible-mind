@@ -6,13 +6,15 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import en from "./locales/en";
 import es from "./locales/es";
 
+export const resources = {
+  en,
+  es,
+} as const;
+
 const i18nInstance = i18n.use(LanguageDetector).use(initReactI18next);
 
 i18nInstance.init({
-  resources: {
-    en,
-    es,
-  },
+  resources,
   debug: true,
   fallbackLng: "en",
   interpolation: {
