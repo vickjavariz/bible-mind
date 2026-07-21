@@ -37,7 +37,7 @@ export default function Sidebar({ children }: SidebarProps) {
 
           <ul className="menu w-full grow md:p-0 md:pt-4 lg:p-4 lg:w-72">
             {sidebarItems.map((item) => (
-              <SidebarItem item={item} />
+              <SidebarItem key={item.to} item={item} />
             ))}
           </ul>
         </div>

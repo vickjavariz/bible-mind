@@ -10,7 +10,7 @@ export default function SidebarItem({ item }: SidebarItemProps) {
   const { to, label, icon: Icon } = item;
 
   return (
-    <li>
+    <li className="mb-1">
       <Link
         to={to}
         className="py-3 px-4 transition duration-200 active:scale-98 hover:bg-neutral"

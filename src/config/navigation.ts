@@ -1,6 +1,6 @@
 import type { ElementType } from "react";
 
-import { BookOpenIcon, PlusIcon } from "@/components/icons";
+import { BookOpenIcon, CogIcon, PlusIcon } from "@/components/icons";
 import i18n from "@/i18n/i18n";
 
 export interface NavigationItem {
@@ -22,5 +22,11 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     label: i18n.t("navigation:addVerse"),
     icon: PlusIcon,
     placement: ["dock"],
+  },
+  {
+    to: "/settings",
+    label: i18n.t("navigation:settings"),
+    icon: CogIcon,
+    placement: ["dock", "sidebar"],
   },
 ];
