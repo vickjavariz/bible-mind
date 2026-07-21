@@ -1,6 +1,16 @@
+import type {
+  ComponentProps,
+  ComponentPropsWithoutRef,
+  ReactNode,
+} from "react";
+
 import { Link } from "@tanstack/react-router";
 
-export default function Hero({ children }) {
+interface HeroWrapperProps {
+  children: ReactNode;
+}
+
+function HeroWrapper({ children }: HeroWrapperProps) {
   return (
     <div className="hero flex-1">
       <div className="hero-content text-center">
@@ -10,7 +20,7 @@ export default function Hero({ children }) {
   );
 }
 
-function HeroTitle({ children, ...props }) {
+function HeroTitle({ children, ...props }: ComponentPropsWithoutRef<"h2">) {
   const className = `text-5xl font-bold ${props.className || ""}`;
 
   return (
@@ -20,7 +30,7 @@ function HeroTitle({ children, ...props }) {
   );
 }
 
-function HeroText({ children, ...props }) {
+function HeroText({ children, ...props }: ComponentPropsWithoutRef<"p">) {
   const className = `py-6 ${props.className || ""}`;
 
   return (
@@ -30,7 +40,7 @@ function HeroText({ children, ...props }) {
   );
 }
 
-function HeroLink({ children, ...props }) {
+function HeroLink({ children, ...props }: ComponentProps<typeof Link>) {
   const className = `btn btn-primary ${props.className || ""}`;
 
   return (
@@ -40,6 +50,10 @@ function HeroLink({ children, ...props }) {
   );
 }
 
-Hero.Title = HeroTitle;
-Hero.Text = HeroText;
-Hero.Link = HeroLink;
+const Hero = Object.assign(HeroWrapper, {
+  Title: HeroTitle,
+  Text: HeroText,
+  Link: HeroLink,
+});
+
+export default Hero;
