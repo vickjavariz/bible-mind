@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 
-import { createFileRoute, useRouter } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
-import { ArrowLeftIcon } from "@/components/icons";
+import PageHeader from "@/components/ui/PageHeader";
 
 export const Route = createFileRoute("/verses/new")({
   component: RouteComponent,
@@ -10,20 +10,13 @@ export const Route = createFileRoute("/verses/new")({
 
 function RouteComponent() {
   const { t } = useTranslation(["verses", "navigation"]);
-  const router = useRouter();
 
   return (
     <>
-      <div className="flex items-center font-bold">
-        <button
-          className="btn btn-circle btn-ghost -m-2 hover:bg-neutral"
-          type="button"
-          onClick={() => router.history.back()}
-        >
-          <ArrowLeftIcon className="text-3xl" />
-        </button>
-        <h1 className="text-xl ml-4">{t("navigation:addVerse")}</h1>
-      </div>
+      <PageHeader>
+        <PageHeader.BackButton />
+        <PageHeader.Title>{t("navigation:addVerse")}</PageHeader.Title>
+      </PageHeader>
     </>
   );
 }
