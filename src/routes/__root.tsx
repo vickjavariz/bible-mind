@@ -9,7 +9,7 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   const pathname = useLocation({ select: (location) => location.pathname });
-  const displayDock = !pathname.includes("/verses/new");
+  const displayDock = pathname !== "/verses/new";
 
   return (
     <Sidebar>
