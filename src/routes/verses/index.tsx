@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 
 import { createFileRoute } from "@tanstack/react-router";
 
-import Hero from "@/components/common/Hero";
 import { PlusIcon } from "@/components/icons";
+import Hero from "@/components/ui/Hero";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const Route = createFileRoute("/verses/")({
