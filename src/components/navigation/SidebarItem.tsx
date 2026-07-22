@@ -13,12 +13,11 @@ export default function SidebarItem({ item }: SidebarItemProps) {
     <li className="mb-1">
       <Link
         to={to}
-        className="py-3 px-4 transition duration-200 active:scale-98 hover:bg-neutral"
+        className="py-3 px-4 transition duration-200 active:scale-98"
         activeProps={{
           className:
             "menu-active rounded-lg font-bold active:scale-100 cursor-default",
         }}
-        activeOptions={{ exact: true }}
       >
         <Icon className="text-xl" />
         <span className="hidden lg:block lg:pl-1">{label}</span>

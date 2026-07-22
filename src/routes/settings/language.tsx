@@ -4,17 +4,18 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import PageHeader from "@/components/ui/PageHeader";
 
-export const Route = createFileRoute("/settings/")({
+export const Route = createFileRoute("/settings/language")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  const { t } = useTranslation("navigation");
+  const { t } = useTranslation("settings");
 
   return (
     <>
-      <PageHeader>
-        <PageHeader.Title>{t("settings")}</PageHeader.Title>
+      <PageHeader className="md:hidden">
+        <PageHeader.BackButton />
+        <PageHeader.Title>{t("language.title")}</PageHeader.Title>
       </PageHeader>
     </>
   );
