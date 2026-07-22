@@ -10,11 +10,7 @@ export default function DockItem({ item }: DockItemProps) {
   const { to, icon: Icon } = item;
 
   return (
-    <Link
-      to={to}
-      activeProps={{ className: "dock-active" }}
-      activeOptions={{ exact: true }}
-    >
+    <Link to={to} activeProps={{ className: "dock-active" }}>
       <Icon className="text-3xl" />
     </Link>
   );

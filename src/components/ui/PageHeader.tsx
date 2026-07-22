@@ -1,15 +1,21 @@
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { useRouter } from "@tanstack/react-router";
 
 import { ArrowLeftIcon } from "../icons";
 
-interface PageHeaderProps {
-  children: ReactNode;
-}
+function PageHeaderWrapper({
+  children,
+  className,
+  ...rest
+}: ComponentPropsWithoutRef<"header">) {
+  const mergedClassName = `flex items-center font-bold p-6 ${className}`;
 
-function PageHeaderWrapper({ children }: PageHeaderProps) {
-  return <header className="flex items-center font-bold">{children}</header>;
+  return (
+    <header className={mergedClassName} {...rest}>
+      {children}
+    </header>
+  );
 }
 
 function Title({

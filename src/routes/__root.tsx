@@ -14,7 +14,7 @@ function RootComponent() {
   return (
     <Sidebar>
       <div className="flex flex-col min-h-dvh">
-        <main className="flex-1 flex flex-col w-full mx-auto p-6">
+        <main className="flex-1 flex flex-col w-full mx-auto">
           <Outlet />
         </main>
 
