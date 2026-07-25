@@ -23,25 +23,25 @@ export default function Sidebar({ children }: SidebarProps) {
 
       <div className="drawer-content">{children}</div>
 
-      <nav className="drawer-side bg-base-200 border-r-base-300 border-r-2">
-        <div className="flex flex-col items-start min-h-dvh">
-          <div className="hidden lg:flex lg:items-center w-full p-6 border-b-base-300 border-b-2">
-            <div className="p-2 bg-blue-500 text-white rounded-xl text-3xl">
-              <BibleIcon />
-            </div>
-            <div className="flex flex-col pl-3">
-              <p className="text-xl font-bold">BibleMind</p>
-              <p className="text-sm text-neutral-500">{t("logo.subtitle")}</p>
-            </div>
+      <aside className="drawer-side flex flex-col items-start min-h-dvh bg-base-200 border-r-base-content/10 border-r">
+        <div className="hidden lg:flex lg:items-center w-full p-6 border-b-base-content/10 border-b">
+          <div className="p-2 bg-blue-500 text-white rounded-xl text-3xl">
+            <BibleIcon />
           </div>
+          <div className="flex flex-col pl-3">
+            <p className="text-xl font-bold">BibleMind</p>
+            <p className="text-sm text-neutral-500">{t("logo.subtitle")}</p>
+          </div>
+        </div>
 
+        <nav>
           <ul className="menu w-full grow md:p-0 md:pt-4 lg:p-4 lg:w-72">
             {sidebarItems.map((item) => (
               <SidebarItem key={item.to} item={item} />
             ))}
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </aside>
     </div>
   );
 }

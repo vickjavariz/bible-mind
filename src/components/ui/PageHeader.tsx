@@ -9,7 +9,7 @@ function PageHeaderWrapper({
   className,
   ...rest
 }: ComponentPropsWithoutRef<"header">) {
-  const mergedClassName = `flex items-center font-bold p-6 ${className}`;
+  const mergedClassName = `sticky top-0 z-20 flex items-center font-bold p-4 md:p-6 bg-base-100/80 backdrop-blur-md ${className || ""}`;
 
   return (
     <header className={mergedClassName} {...rest}>

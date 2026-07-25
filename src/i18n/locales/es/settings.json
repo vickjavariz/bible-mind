@@ -1,5 +1,8 @@
 {
+  "emptyState": "No hay configuración seleccionada",
   "language": {
-    "title": "Idioma"
+    "title": "Idioma",
+    "selectedLanguage": "Idioma seleccionado",
+    "languages": "Idiomas"
   }
 }

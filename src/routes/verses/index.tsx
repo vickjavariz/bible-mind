@@ -4,6 +4,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PlusIcon } from "@/components/icons";
 import Hero from "@/components/ui/Hero";
+import PageContent from "@/components/ui/PageContent";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const Route = createFileRoute("/verses/")({
@@ -19,16 +20,18 @@ function RouteComponent() {
         <PageHeader.Title>{t("navigation:myVerses")}</PageHeader.Title>
       </PageHeader>
 
-      <Hero>
-        <Hero.Title className="text-neutral">
-          {t("emptyState.title")}
-        </Hero.Title>
-        <Hero.Text>{t("emptyState.description")}</Hero.Text>
-        <Hero.Link to="/verses/new">
-          <PlusIcon />
-          {t("emptyState.action")}
-        </Hero.Link>
-      </Hero>
+      <PageContent>
+        <Hero>
+          <Hero.Title className="text-neutral">
+            {t("emptyState.title")}
+          </Hero.Title>
+          <Hero.Text>{t("emptyState.description")}</Hero.Text>
+          <Hero.Link to="/verses/new">
+            <PlusIcon />
+            {t("emptyState.action")}
+          </Hero.Link>
+        </Hero>
+      </PageContent>
     </>
   );
 }

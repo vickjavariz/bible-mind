@@ -8,11 +8,9 @@ export default function Dock() {
 
   return (
     <nav className="dock dock-xs md:hidden">
-      <div className="hidden flex-none md:block pointer-events-none"></div>
       {dockItems.map((item) => (
-        <DockItem key={item.label} item={item} />
+        <DockItem key={item.to} item={item} />
       ))}
-      <div className="hidden flex-none md:block pointer-events-none"></div>
     </nav>
   );
 }

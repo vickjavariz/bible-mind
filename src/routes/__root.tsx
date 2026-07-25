@@ -13,13 +13,10 @@ function RootComponent() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col min-h-dvh">
-        <main className="flex-1 flex flex-col w-full mx-auto">
-          <Outlet />
-        </main>
-
-        {displayDock && <Dock />}
-      </div>
+      <main className="flex flex-col min-h-dvh">
+        <Outlet />
+      </main>
+      {displayDock && <Dock />}
     </Sidebar>
   );
 }

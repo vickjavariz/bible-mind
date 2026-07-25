@@ -1,5 +1,8 @@
 {
+  "emptyState": "No Setting Selected",
   "language": {
-    "title": "Language"
+    "title": "Language",
+    "selectedLanguage": "Selected Language",
+    "languages": "Languages"
   }
 }

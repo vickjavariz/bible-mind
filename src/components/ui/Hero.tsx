@@ -14,7 +14,7 @@ function HeroWrapper({ children }: HeroProps) {
   return (
     <div className="hero flex-1">
       <div className="hero-content text-center">
-        <div className="max-w-md">{children}</div>
+        <div className="max-w-lg">{children}</div>
       </div>
     </div>
   );

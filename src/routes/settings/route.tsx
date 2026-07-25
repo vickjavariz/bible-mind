@@ -22,18 +22,16 @@ function RouteComponent() {
   return (
     <>
       <PageHeader
-        className={`${atRootSettingsRoute ? "flex" : "hidden"} md:flex md:border-b-2 md:border-base-300`}
+        className={`${atRootSettingsRoute ? "flex" : "hidden"} md:flex md:border-b md:border-base-content/10`}
       >
         <PageHeader.Title>{t("navigation:settings")}</PageHeader.Title>
       </PageHeader>
 
-      <div
-        className={`flex flex-1 ${atRootSettingsRoute ? "px-4" : "px-0"} md:flex md:px-0`}
-      >
+      <div className={`flex flex-1`}>
         <nav
-          className={`${atRootSettingsRoute ? "flex" : "hidden"} md:flex flex-1 pt-4 md:max-w-64 md:border-r-2 md:border-base-300`}
+          className={`${atRootSettingsRoute ? "flex" : "hidden"} md:flex flex-1 p-4 pt-5 md:p-2 md:max-w-64 md:border-r md:border-base-content/10`}
         >
-          <ul className="menu rounded-xl flex-1 h-fit py-2 bg-base-300 md:bg-base-100">
+          <ul className="menu rounded-xl flex-1 h-fit py-2 bg-base-300 md:bg-base-100 shadow-sm md:shadow-none">
             <li>
               <Link
                 to="/settings/language"

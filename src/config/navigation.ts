@@ -1,31 +1,30 @@
-import type { ElementType } from "react";
+import type { ComponentType, SVGProps } from "react";
 
 import { BookOpenIcon, CogIcon, PlusIcon } from "@/components/icons";
-import i18n from "@/i18n/i18n";
 
 export interface NavigationItem {
   to: string;
-  label: string;
-  icon: ElementType;
+  labelKey: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   placement: ("dock" | "sidebar")[];
 }
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   {
     to: "/verses",
-    label: i18n.t("navigation:myVerses"),
+    labelKey: "navigation:myVerses",
     icon: BookOpenIcon,
     placement: ["dock", "sidebar"],
   },
   {
     to: "/verses/new",
-    label: i18n.t("navigation:addVerse"),
+    labelKey: "navigation:addVerse",
     icon: PlusIcon,
     placement: ["dock"],
   },
   {
     to: "/settings",
-    label: i18n.t("navigation:settings"),
+    labelKey: "navigation:settings",
     icon: CogIcon,
     placement: ["dock", "sidebar"],
   },

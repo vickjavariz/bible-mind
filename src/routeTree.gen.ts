@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SettingsRouteRouteImport } from './routes/settings/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as VersesIndexRouteImport } from './routes/verses/index'
+import { Route as SettingsIndexRouteImport } from './routes/settings/index'
 import { Route as VersesNewRouteImport } from './routes/verses/new'
 import { Route as SettingsLanguageRouteImport } from './routes/settings/language'
 
@@ -30,6 +31,11 @@ const VersesIndexRoute = VersesIndexRouteImport.update({
   path: '/verses/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SettingsIndexRoute = SettingsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SettingsRouteRoute,
+} as any)
 const VersesNewRoute = VersesNewRouteImport.update({
   id: '/verses/new',
   path: '/verses/new',
@@ -46,13 +52,14 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRouteRouteWithChildren
   '/settings/language': typeof SettingsLanguageRoute
   '/verses/new': typeof VersesNewRoute
+  '/settings/': typeof SettingsIndexRoute
   '/verses/': typeof VersesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/settings': typeof SettingsRouteRouteWithChildren
   '/settings/language': typeof SettingsLanguageRoute
   '/verses/new': typeof VersesNewRoute
+  '/settings': typeof SettingsIndexRoute
   '/verses': typeof VersesIndexRoute
 }
 export interface FileRoutesById {
@@ -61,20 +68,27 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRouteRouteWithChildren
   '/settings/language': typeof SettingsLanguageRoute
   '/verses/new': typeof VersesNewRoute
+  '/settings/': typeof SettingsIndexRoute
   '/verses/': typeof VersesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/settings' | '/settings/language' | '/verses/new' | '/verses/'
+    | '/'
+    | '/settings'
+    | '/settings/language'
+    | '/verses/new'
+    | '/settings/'
+    | '/verses/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/settings' | '/settings/language' | '/verses/new' | '/verses'
+  to: '/' | '/settings/language' | '/verses/new' | '/settings' | '/verses'
   id:
     | '__root__'
     | '/'
     | '/settings'
     | '/settings/language'
     | '/verses/new'
+    | '/settings/'
     | '/verses/'
   fileRoutesById: FileRoutesById
 }
@@ -108,6 +122,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VersesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/settings/': {
+      id: '/settings/'
+      path: '/'
+      fullPath: '/settings/'
+      preLoaderRoute: typeof SettingsIndexRouteImport
+      parentRoute: typeof SettingsRouteRoute
+    }
     '/verses/new': {
       id: '/verses/new'
       path: '/verses/new'
@@ -127,10 +148,12 @@ declare module '@tanstack/react-router' {
 
 interface SettingsRouteRouteChildren {
   SettingsLanguageRoute: typeof SettingsLanguageRoute
+  SettingsIndexRoute: typeof SettingsIndexRoute
 }
 
 const SettingsRouteRouteChildren: SettingsRouteRouteChildren = {
   SettingsLanguageRoute: SettingsLanguageRoute,
+  SettingsIndexRoute: SettingsIndexRoute,
 }
 
 const SettingsRouteRouteWithChildren = SettingsRouteRoute._addFileChildren(
