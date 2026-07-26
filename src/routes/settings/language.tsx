@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { createFileRoute } from "@tanstack/react-router";
 
+import { CheckIcon } from "@/components/icons";
 import PageContent from "@/components/ui/PageContent";
 import PageHeader from "@/components/ui/PageHeader";
 import {
@@ -42,13 +43,16 @@ function RouteComponent() {
             {Object.entries(LANGUAGES).map(([code, config]) => (
               <li key={code}>
                 <button
-                  className="py-2"
+                  className="py-2 flex items-end"
                   type="button"
                   onClick={() => {
                     if (code !== languageKey) i18n.changeLanguage(code);
                   }}
                 >
                   {config.nativeName}
+                  <CheckIcon
+                    className={`text-primary text-2xl ml-1 ${languageKey !== code ? "invisible" : ""}`}
+                  />
                 </button>
               </li>
             ))}
