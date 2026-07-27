@@ -9,7 +9,7 @@ import {
   DEFAULT_LANGUAGE,
   LANGUAGES,
   type SupportedLanguage,
-} from "@/config/languages";
+} from "@/i18n/languages";
 
 export const Route = createFileRoute("/settings/language")({
   component: RouteComponent,
