@@ -6,11 +6,11 @@ import type {
 
 import { Link } from "@tanstack/react-router";
 
-interface HeroProps {
+interface EmptyStateProps {
   children: ReactNode;
 }
 
-function HeroWrapper({ children }: HeroProps) {
+function EmptyStateWrapper({ children }: EmptyStateProps) {
   return (
     <div className="hero flex-1">
       <div className="hero-content text-center">
@@ -20,12 +20,12 @@ function HeroWrapper({ children }: HeroProps) {
   );
 }
 
-function HeroTitle({
+function EmptyStateTitle({
   children,
   className,
   ...rest
 }: ComponentPropsWithoutRef<"h2">) {
-  const mergedClassName = `text-5xl font-bold ${className || ""}`;
+  const mergedClassName = `text-4xl font-bold ${className || ""}`;
 
   return (
     <h2 className={mergedClassName} {...rest}>
@@ -34,7 +34,7 @@ function HeroTitle({
   );
 }
 
-function HeroText({
+function EmptyStateText({
   children,
   className,
   ...rest
@@ -48,7 +48,7 @@ function HeroText({
   );
 }
 
-function HeroLink({
+function EmptyStateLink({
   children,
   className,
   ...rest
@@ -62,10 +62,10 @@ function HeroLink({
   );
 }
 
-const Hero = Object.assign(HeroWrapper, {
-  Title: HeroTitle,
-  Text: HeroText,
-  Link: HeroLink,
+const EmptyState = Object.assign(EmptyStateWrapper, {
+  Title: EmptyStateTitle,
+  Text: EmptyStateText,
+  Link: EmptyStateLink,
 });
 
-export default Hero;
+export default EmptyState;

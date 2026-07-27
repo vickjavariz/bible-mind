@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { createFileRoute } from "@tanstack/react-router";
 
-import Hero from "@/components/ui/Hero";
+import EmptyState from "@/components/ui/EmptyState";
 import PageContent from "@/components/ui/PageContent";
 
 export const Route = createFileRoute("/settings/")({
@@ -14,9 +14,11 @@ function RouteComponent() {
 
   return (
     <PageContent className="hidden md:flex">
-      <Hero>
-        <Hero.Title className="text-neutral">{t("emptyState")}</Hero.Title>
-      </Hero>
+      <EmptyState>
+        <EmptyState.Title className="text-neutral">
+          {t("emptyState")}
+        </EmptyState.Title>
+      </EmptyState>
     </PageContent>
   );
 }

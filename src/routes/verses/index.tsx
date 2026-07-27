@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PlusIcon } from "@/components/icons";
-import Hero from "@/components/ui/Hero";
+import EmptyState from "@/components/ui/EmptyState";
 import PageContent from "@/components/ui/PageContent";
 import PageHeader from "@/components/ui/PageHeader";
 
@@ -21,16 +21,16 @@ function RouteComponent() {
       </PageHeader>
 
       <PageContent>
-        <Hero>
-          <Hero.Title className="text-neutral">
+        <EmptyState>
+          <EmptyState.Title className="text-neutral">
             {t("emptyState.title")}
-          </Hero.Title>
-          <Hero.Text>{t("emptyState.description")}</Hero.Text>
-          <Hero.Link to="/verses/new">
+          </EmptyState.Title>
+          <EmptyState.Text>{t("emptyState.description")}</EmptyState.Text>
+          <EmptyState.Link to="/verses/new">
             <PlusIcon />
             {t("emptyState.action")}
-          </Hero.Link>
-        </Hero>
+          </EmptyState.Link>
+        </EmptyState>
       </PageContent>
     </>
   );
