@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { CheckIcon } from "@/components/icons";
-import PageContent from "@/components/ui/PageContent";
-import PageHeader from "@/components/ui/PageHeader";
+import PageContent from "@/components/layout/PageContent";
+import PageHeader from "@/components/layout/PageHeader";
 import {
   DEFAULT_LANGUAGE,
   LANGUAGES,
   type SupportedLanguage,
-} from "@/i18n/languages";
+} from "@/i18n/language";
 
 export const Route = createFileRoute("/settings/language")({
   component: RouteComponent,

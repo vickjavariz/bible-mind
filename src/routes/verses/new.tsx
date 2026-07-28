@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { createFileRoute } from "@tanstack/react-router";
 
-import PageHeader from "@/components/ui/PageHeader";
+import PageHeader from "@/components/layout/PageHeader";
 
 export const Route = createFileRoute("/verses/new")({
   component: RouteComponent,

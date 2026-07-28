@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PlusIcon } from "@/components/icons";
-import EmptyState from "@/components/ui/EmptyState";
-import PageContent from "@/components/ui/PageContent";
-import PageHeader from "@/components/ui/PageHeader";
+import EmptyState from "@/components/layout/EmptyState";
+import PageContent from "@/components/layout/PageContent";
+import PageHeader from "@/components/layout/PageHeader";
 
 export const Route = createFileRoute("/verses/")({
   component: RouteComponent,

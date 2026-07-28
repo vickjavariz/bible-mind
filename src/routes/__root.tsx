@@ -1,7 +1,7 @@
 import { Outlet, createRootRoute, useLocation } from "@tanstack/react-router";
 
-import Dock from "@/components/navigation/Dock";
-import Sidebar from "@/components/navigation/Sidebar";
+import Dock from "./-root/Dock";
+import Sidebar from "./-root/Sidebar";
 
 export const Route = createRootRoute({
   component: RootComponent,

@@ -8,7 +8,7 @@ import {
 } from "@tanstack/react-router";
 
 import { TranslateIcon } from "@/components/icons";
-import PageHeader from "@/components/ui/PageHeader";
+import PageHeader from "@/components/layout/PageHeader";
 
 export const Route = createFileRoute("/settings")({
   component: RouteComponent,

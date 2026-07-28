@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 
 import { createFileRoute } from "@tanstack/react-router";
 
-import EmptyState from "@/components/ui/EmptyState";
-import PageContent from "@/components/ui/PageContent";
+import EmptyState from "@/components/layout/EmptyState";
+import PageContent from "@/components/layout/PageContent";
 
 export const Route = createFileRoute("/settings/")({
   component: RouteComponent,
