@@ -1,24 +1,7 @@
-import { useTranslation } from "react-i18next";
-
 import { createFileRoute } from "@tanstack/react-router";
 
-import EmptyState from "@/components/layout/EmptyState";
-import PageContent from "@/components/layout/PageContent";
+import SettingsView from "@/features/settings/views/SettingsView";
 
 export const Route = createFileRoute("/settings/")({
-  component: RouteComponent,
+  component: SettingsView,
 });
-
-function RouteComponent() {
-  const { t } = useTranslation("settings");
-
-  return (
-    <PageContent className="hidden md:flex">
-      <EmptyState>
-        <EmptyState.Title className="text-neutral">
-          {t("emptyState")}
-        </EmptyState.Title>
-      </EmptyState>
-    </PageContent>
-  );
-}

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import { NAVIGATION_ITEMS } from "./navigation";
+import { NAVIGATION_ITEMS } from "../config/navigation";
 
 export default function Dock() {
   const dockItems = NAVIGATION_ITEMS.filter((item) =>

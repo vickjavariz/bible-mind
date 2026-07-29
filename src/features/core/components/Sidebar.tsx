@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 import { BibleIcon } from "@/components/icons";
 
-import { NAVIGATION_ITEMS } from "./navigation";
+import { NAVIGATION_ITEMS } from "../config/navigation";
 
 interface SidebarProps {
   children: ReactNode;

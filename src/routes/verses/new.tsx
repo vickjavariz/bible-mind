@@ -1,22 +1,7 @@
-import { useTranslation } from "react-i18next";
-
 import { createFileRoute } from "@tanstack/react-router";
 
-import PageHeader from "@/components/layout/PageHeader";
+import AddVerseView from "@/features/verses/views/AddVerseView";
 
 export const Route = createFileRoute("/verses/new")({
-  component: RouteComponent,
+  component: AddVerseView,
 });
-
-function RouteComponent() {
-  const { t } = useTranslation(["verses", "navigation"]);
-
-  return (
-    <>
-      <PageHeader>
-        <PageHeader.BackButton />
-        <PageHeader.Title>{t("navigation:addVerse")}</PageHeader.Title>
-      </PageHeader>
-    </>
-  );
-}
