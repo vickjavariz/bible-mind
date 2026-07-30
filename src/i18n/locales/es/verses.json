@@ -3,5 +3,13 @@
     "title": "No hay versículos",
     "description": "¡Añade tu primer versículo para empezar a memorizar!",
     "action": "Añadir versículo"
+  },
+  "addVerse": {
+    "fields": {
+      "book": {
+        "label": "Libro",
+        "placeholder": "Elige un libro..."
+      }
+    }
   }
 }
