@@ -3,10 +3,14 @@ import { useTranslation } from "react-i18next";
 
 import PageContent from "@/components/layout/PageContent";
 import PageHeader from "@/components/layout/PageHeader";
+import InputField from "@/components/ui/InputField";
 import SelectField from "@/components/ui/SelectField";
 
 export default function AddVerseView() {
   const [book, setBook] = useState("");
+  const [chapter, setChapter] = useState("");
+  const [startVerse, setStartVerse] = useState("");
+  const [endVerse, setEndVerse] = useState("");
 
   const { t } = useTranslation(["verses", "bible", "navigation"]);
   const oldTestamentBooks = t("bible:oldTestament.books", {
@@ -28,7 +32,7 @@ export default function AddVerseView() {
           label={t("addVerse.fields.book.label")}
           placeholder={t("addVerse.fields.book.placeholder")}
           value={book}
-          onChange={(event) => setBook(event.target.value)}
+          onChange={(e) => setBook(e.target.value)}
         >
           {oldTestamentBooks.map(({ id, name }) => (
             <option key={id} value={id}>
@@ -42,6 +46,43 @@ export default function AddVerseView() {
             </option>
           ))}
         </SelectField>
+
+        <fieldset className="fieldset mt-6">
+          <legend className="fieldset-legend font-bold text-sm text-base-content/60">
+            {t("addVerse.fields.referenceGroup.title").toUpperCase()}
+          </legend>
+
+          <div className="flex">
+            <InputField
+              className="mr-2"
+              label={t("addVerse.fields.referenceGroup.chapter.label")}
+              placeholder={t(
+                "addVerse.fields.referenceGroup.chapter.placeholder",
+              )}
+              value={chapter}
+              onChange={(e) => setChapter(e.target.value)}
+            />
+
+            <InputField
+              className="mr-2"
+              label={t("addVerse.fields.referenceGroup.startVerse.label")}
+              placeholder={t(
+                "addVerse.fields.referenceGroup.startVerse.placeholder",
+              )}
+              value={startVerse}
+              onChange={(e) => setStartVerse(e.target.value)}
+            />
+
+            <InputField
+              label={t("addVerse.fields.referenceGroup.endVerse.label")}
+              placeholder={t(
+                "addVerse.fields.referenceGroup.endVerse.placeholder",
+              )}
+              value={endVerse}
+              onChange={(e) => setEndVerse(e.target.value)}
+            />
+          </div>
+        </fieldset>
       </PageContent>
     </>
   );

@@ -9,6 +9,21 @@
       "book": {
         "label": "Libro",
         "placeholder": "Elige un libro..."
+      },
+      "referenceGroup": {
+        "title": "Referencia",
+        "chapter": {
+          "label": "Capítulo",
+          "placeholder": "3"
+        },
+        "startVerse": {
+          "label": "Versículo",
+          "placeholder": "16"
+        },
+        "endVerse": {
+          "label": "Hasta (opcional)",
+          "placeholder": "17"
+        }
       }
     }
   }
