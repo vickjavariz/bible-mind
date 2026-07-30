@@ -12,6 +12,9 @@ export default function AddVerseView() {
   const oldTestamentBooks = t("bible:oldTestament.books", {
     returnObjects: true,
   });
+  const newTestamentBooks = t("bible:newTestament.books", {
+    returnObjects: true,
+  });
 
   return (
     <>
@@ -24,6 +27,7 @@ export default function AddVerseView() {
         <SelectField
           label={t("addVerse.fields.book.label")}
           placeholder={t("addVerse.fields.book.placeholder")}
+          value={book}
           onChange={(event) => setBook(event.target.value)}
         >
           {oldTestamentBooks.map(({ id, name }) => (
@@ -31,7 +35,12 @@ export default function AddVerseView() {
               {name}
             </option>
           ))}
-          <hr />
+          <hr className="text-base-content/20" />
+          {newTestamentBooks.map(({ id, name }) => (
+            <option key={id} value={id}>
+              {name}
+            </option>
+          ))}
         </SelectField>
       </PageContent>
     </>

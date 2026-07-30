@@ -3,7 +3,7 @@
     "title": "Antiguo Testamento",
     "books": [
       { "id": "GEN", "name": "Génesis" },
-      { "id": "EXO", "name": "Exodo" },
+      { "id": "EXO", "name": "Éxodo" },
       { "id": "LEV", "name": "Levítico" },
       { "id": "NUM", "name": "Números" },
       { "id": "DEU", "name": "Deuteronomio" },
@@ -41,6 +41,38 @@
       { "id": "HAG", "name": "Hageo" },
       { "id": "ZEC", "name": "Zacarías" },
       { "id": "MAL", "name": "Malaquías" }
+    ]
+  },
+  "newTestament": {
+    "title": "New Testament",
+    "books": [
+      { "id": "MAT", "name": "Mateo" },
+      { "id": "MRK", "name": "Marcos" },
+      { "id": "LUK", "name": "Lucas" },
+      { "id": "JHN", "name": "Juan" },
+      { "id": "ACT", "name": "Hechos" },
+      { "id": "ROM", "name": "Romanos" },
+      { "id": "1CO", "name": "1 Corintios" },
+      { "id": "2CO", "name": "2 Corintios" },
+      { "id": "GAL", "name": "Gálatas" },
+      { "id": "EPH", "name": "Efesios" },
+      { "id": "PHP", "name": "Filipenses" },
+      { "id": "COL", "name": "Colosenses" },
+      { "id": "1TH", "name": "1 Tesalonicenses" },
+      { "id": "2TH", "name": "2 Tesalonicenses" },
+      { "id": "1TI", "name": "1 Timoteo" },
+      { "id": "2TI", "name": "2 Timoteo" },
+      { "id": "TIT", "name": "Tito" },
+      { "id": "PHM", "name": "Filemón" },
+      { "id": "HEB", "name": "Hebreos" },
+      { "id": "JAS", "name": "Santiago" },
+      { "id": "1PE", "name": "1 Pedro" },
+      { "id": "2PE", "name": "2 Pedro" },
+      { "id": "1JN", "name": "1 Juan" },
+      { "id": "2JN", "name": "2 Juan" },
+      { "id": "3JN", "name": "3 Juan" },
+      { "id": "JUD", "name": "Judas" },
+      { "id": "REV", "name": "Apocalipsis" }
     ]
   }
 }

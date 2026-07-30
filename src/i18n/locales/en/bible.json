@@ -42,5 +42,37 @@
       { "id": "ZEC", "name": "Zechariah" },
       { "id": "MAL", "name": "Malachi" }
     ]
+  },
+  "newTestament": {
+    "title": "New Testament",
+    "books": [
+      { "id": "MAT", "name": "Matthew" },
+      { "id": "MRK", "name": "Mark" },
+      { "id": "LUK", "name": "Luke" },
+      { "id": "JHN", "name": "John" },
+      { "id": "ACT", "name": "Acts" },
+      { "id": "ROM", "name": "Romans" },
+      { "id": "1CO", "name": "1 Corinthians" },
+      { "id": "2CO", "name": "2 Corinthians" },
+      { "id": "GAL", "name": "Galatians" },
+      { "id": "EPH", "name": "Ephesians" },
+      { "id": "PHP", "name": "Philippians" },
+      { "id": "COL", "name": "Colossians" },
+      { "id": "1TH", "name": "1 Thessalonians" },
+      { "id": "2TH", "name": "2 Thessalonians" },
+      { "id": "1TI", "name": "1 Timothy" },
+      { "id": "2TI", "name": "2 Timothy" },
+      { "id": "TIT", "name": "Titus" },
+      { "id": "PHM", "name": "Philemon" },
+      { "id": "HEB", "name": "Hebrews" },
+      { "id": "JAS", "name": "James" },
+      { "id": "1PE", "name": "1 Peter" },
+      { "id": "2PE", "name": "2 Peter" },
+      { "id": "1JN", "name": "1 John" },
+      { "id": "2JN", "name": "2 John" },
+      { "id": "3JN", "name": "3 John" },
+      { "id": "JUD", "name": "Jude" },
+      { "id": "REV", "name": "Revelation" }
+    ]
   }
 }
