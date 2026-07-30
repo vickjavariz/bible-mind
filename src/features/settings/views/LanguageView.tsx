@@ -25,14 +25,18 @@ export default function LanguageView() {
 
       <PageContent className="md:pt-6">
         <section>
-          <h2 className="font-bold">{t("language.selectedLanguage")}</h2>
+          <h2 className="font-bold text-sm text-base-content/60">
+            {t("language.selectedLanguage").toUpperCase()}
+          </h2>
           <p className="rounded-xl bg-base-300 h-fit w-full mt-3 p-4 font-bold shadow-sm">
             {selectedLanguage}
           </p>
         </section>
 
         <section>
-          <h2 className="font-bold pt-4">{t("language.languages")}</h2>
+          <h2 className="font-bold text-sm text-base-content/60 pt-6">
+            {t("language.languages").toUpperCase()}
+          </h2>
           <ul className="menu rounded-xl bg-base-300 h-fit w-full py-2 mt-3 shadow-sm">
             {Object.entries(LANGUAGES).map(([code, config]) => (
               <li key={code}>
