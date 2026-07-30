@@ -1,4 +1,4 @@
-import type { ChangeEvent, ReactNode } from "react";
+import { type ChangeEvent, type ReactNode, useId } from "react";
 
 interface SelectFieldProps {
   label: string;
@@ -17,12 +17,14 @@ export default function SelectField({
   onChange,
   className,
 }: SelectFieldProps) {
+  const id = useId();
   const mergedClassName = `label flex flex-col items-start ${className || ""}`;
 
   return (
     <label className={mergedClassName}>
       <span className="text-sm font-bold">{label.toUpperCase()}</span>
       <select
+        id={id}
         className="select w-full bg-base-300 shadow-sm"
         value={value}
         onChange={onChange}
