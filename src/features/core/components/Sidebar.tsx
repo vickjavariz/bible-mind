@@ -38,7 +38,7 @@ export default function Sidebar({ children }: SidebarProps) {
         </div>
 
         <nav>
-          <ul className="menu w-full grow md:p-0 md:pt-4 lg:p-4 lg:w-72">
+          <ul className="menu w-full grow md:p-0 md:pt-4 lg:p-4 lg:w-64">
             {sidebarItems.map(({ to, labelKey, icon: Icon }) => (
               <li className="mb-1" key={to}>
                 <Link
