@@ -11,6 +11,7 @@ export default function AddVerseView() {
   const [chapter, setChapter] = useState("");
   const [startVerse, setStartVerse] = useState("");
   const [endVerse, setEndVerse] = useState("");
+  const [verseText, setVerseText] = useState("");
 
   const { t } = useTranslation(["verses", "bible", "navigation"]);
   const oldTestamentBooks = t("bible:oldTestament.books", {
@@ -83,6 +84,16 @@ export default function AddVerseView() {
             />
           </div>
         </fieldset>
+
+        <label className="label flex flex-col w-full items-start">
+          <span className="text-sm font-bold mt-6">VERSE TEXT</span>
+          <textarea
+            className="textarea w-full h-64 bg-base-300 shadow-sm"
+            placeholder="Type the verse text here..."
+            value={verseText}
+            onChange={(e) => setVerseText(e.target.value)}
+          />
+        </label>
       </PageContent>
     </>
   );
