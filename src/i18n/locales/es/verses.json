@@ -24,6 +24,10 @@
           "label": "Hasta (opcional)",
           "placeholder": "17"
         }
+      },
+      "verseText": {
+        "label": "Texto del versículo",
+        "placeholder": "Escribe aquí el texto del versículo..."
       }
     }
   }

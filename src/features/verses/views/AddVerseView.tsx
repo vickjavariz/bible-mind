@@ -86,10 +86,12 @@ export default function AddVerseView() {
         </fieldset>
 
         <label className="label flex flex-col w-full items-start">
-          <span className="text-sm font-bold mt-6">VERSE TEXT</span>
+          <span className="text-sm font-bold mt-6">
+            {t("addVerse.fields.verseText.label").toUpperCase()}
+          </span>
           <textarea
             className="textarea w-full h-64 bg-base-300 shadow-sm"
-            placeholder="Type the verse text here..."
+            placeholder={t("addVerse.fields.verseText.placeholder")}
             value={verseText}
             onChange={(e) => setVerseText(e.target.value)}
           />

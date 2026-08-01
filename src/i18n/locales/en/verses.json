@@ -24,6 +24,10 @@
           "label": "To (Optional)",
           "placeholder": "17"
         }
+      },
+      "verseText": {
+        "label": "Verse Text",
+        "placeholder": "Type the verse text here..."
       }
     }
   }
