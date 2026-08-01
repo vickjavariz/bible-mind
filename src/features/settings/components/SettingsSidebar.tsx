@@ -15,9 +15,9 @@ export default function SettingsSidebar({
 
   return (
     <nav
-      className={`${isHiddenOnMobile ? "hidden" : "flex"} md:flex flex-1 p-4 pt-5 md:p-2 md:max-w-64 md:border-r md:border-base-content/10`}
+      className={`${isHiddenOnMobile ? "hidden" : "flex"} md:flex flex-1 p-4 pt-5 md:p-2 lg:pt-3 md:max-w-56 md:border-r md:border-base-content/10`}
     >
-      <ul className="menu rounded-xl flex-1 h-fit py-2 bg-base-300 md:bg-base-100 shadow-sm md:shadow-none">
+      <ul className="menu rounded-xl flex-1 h-fit py-2 md:px-0 bg-base-300 md:bg-base-100 shadow-sm md:shadow-none">
         {SETTING_ITEMS.map(({ to, labelKey, icon: Icon }) => (
           <li key={to}>
             <Link

@@ -14,12 +14,12 @@ export default function SettingsLayout() {
   return (
     <>
       <PageHeader
-        className={`${atRootSettingsRoute ? "flex" : "hidden"} md:flex md:border-b md:border-base-content/10`}
+        className={`flex ${atRootSettingsRoute ? "flex" : "hidden"} md:hidden`}
       >
         <PageHeader.Title>{t("navigation:settings")}</PageHeader.Title>
       </PageHeader>
 
-      <div className={`flex flex-1`}>
+      <div className="flex flex-1">
         <SettingsSidebar isHiddenOnMobile={!atRootSettingsRoute} />
 
         <div

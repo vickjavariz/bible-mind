@@ -24,8 +24,8 @@ export default function Sidebar({ children }: SidebarProps) {
 
       <div className="drawer-content">{children}</div>
 
-      <aside className="drawer-side flex flex-col items-start min-h-dvh bg-base-200 border-r-base-content/10 border-r">
-        <div className="hidden lg:flex lg:items-center w-full p-6 border-b-base-content/10 border-b">
+      <aside className="drawer-side flex flex-col items-start min-h-dvh bg-base-200 border-r-base-content/10 border-r lg:w-64">
+        <div className="hidden lg:flex w-full p-4 pt-6 border-b-base-content/10">
           <div className="p-2 bg-blue-500 text-white rounded-xl text-3xl">
             <BibleIcon />
           </div>
@@ -37,8 +37,8 @@ export default function Sidebar({ children }: SidebarProps) {
           </div>
         </div>
 
-        <nav>
-          <ul className="menu w-full grow md:p-0 md:pt-4 lg:p-4 lg:w-64">
+        <nav className="w-full">
+          <ul className="menu w-full grow md:p-0 md:pt-4 lg:px-2">
             {sidebarItems.map(({ to, labelKey, icon: Icon }) => (
               <li className="mb-1" key={to}>
                 <Link

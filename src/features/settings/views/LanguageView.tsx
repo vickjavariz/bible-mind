@@ -18,7 +18,7 @@ export default function LanguageView() {
 
   return (
     <>
-      <PageHeader className="md:hidden">
+      <PageHeader>
         <PageHeader.BackButton />
         <PageHeader.Title>{t("language.title")}</PageHeader.Title>
       </PageHeader>
