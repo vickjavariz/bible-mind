@@ -9,7 +9,7 @@ function PageHeaderWrapper({
   className,
   ...rest
 }: ComponentPropsWithoutRef<"header">) {
-  const mergedClassName = `sticky top-0 z-20 flex items-center font-bold w-full max-w-7xl mx-auto p-4 md:p-6 bg-base-100/80 backdrop-blur-md ${className || ""}`;
+  const mergedClassName = `sticky top-0 z-20 flex items-center font-bold w-full max-w-6xl mx-auto p-4 md:p-6 lg:p-8 bg-base-100/80 backdrop-blur-md ${className || ""}`;
 
   return (
     <header className={mergedClassName} {...rest}>
@@ -23,7 +23,7 @@ function Title({
   className,
   ...rest
 }: ComponentPropsWithoutRef<"h1">) {
-  const mergedClassName = `text-xl ${className || ""}`;
+  const mergedClassName = `text-xl lg:text-2xl ${className || ""}`;
 
   return (
     <h1 className={mergedClassName} {...rest}>
