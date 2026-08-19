@@ -1,8 +1,4 @@
-import type {
-  ComponentProps,
-  ComponentPropsWithoutRef,
-  ReactNode,
-} from "react";
+import type { ComponentProps, ReactNode } from "react";
 
 import { Link } from "@tanstack/react-router";
 
@@ -24,7 +20,7 @@ function EmptyStateTitle({
   children,
   className,
   ...rest
-}: ComponentPropsWithoutRef<"h2">) {
+}: ComponentProps<"h2">) {
   const mergedClassName = `text-4xl font-bold ${className || ""}`;
 
   return (
@@ -34,11 +30,7 @@ function EmptyStateTitle({
   );
 }
 
-function EmptyStateText({
-  children,
-  className,
-  ...rest
-}: ComponentPropsWithoutRef<"p">) {
+function EmptyStateText({ children, className, ...rest }: ComponentProps<"p">) {
   const mergedClassName = `py-6 ${className || ""}`;
 
   return (

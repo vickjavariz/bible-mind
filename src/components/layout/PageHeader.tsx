@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 
 import { useRouter } from "@tanstack/react-router";
 
@@ -8,7 +8,7 @@ function PageHeaderWrapper({
   children,
   className,
   ...rest
-}: ComponentPropsWithoutRef<"header">) {
+}: ComponentProps<"header">) {
   const mergedClassName = `sticky top-0 z-20 flex items-center font-bold w-full max-w-6xl mx-auto p-4 md:p-6 lg:p-8 bg-base-100/80 backdrop-blur-md ${className || ""}`;
 
   return (
@@ -18,11 +18,7 @@ function PageHeaderWrapper({
   );
 }
 
-function Title({
-  children,
-  className,
-  ...rest
-}: ComponentPropsWithoutRef<"h1">) {
+function Title({ children, className, ...rest }: ComponentProps<"h1">) {
   const mergedClassName = `text-xl lg:text-2xl ${className || ""}`;
 
   return (
@@ -32,11 +28,7 @@ function Title({
   );
 }
 
-function BackButton({
-  className,
-  onClick,
-  ...rest
-}: ComponentPropsWithoutRef<"button">) {
+function BackButton({ className, onClick, ...rest }: ComponentProps<"button">) {
   const router = useRouter();
   const mergedClassName = `btn btn-circle btn-ghost -m-2 mr-2 hover:bg-neutral ${className || ""}`;
 
