@@ -1,33 +1,33 @@
-import { type ChangeEvent, useId } from "react";
+import { type ComponentProps, useId } from "react";
 
-interface InputFieldProps {
+interface InputFieldProps extends ComponentProps<"input"> {
   label: string;
   placeholder: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
+  labelClassName?: string;
 }
 
 export default function InputField({
+  id: externalId,
   label,
   placeholder,
-  value,
-  onChange,
   className,
+  labelClassName,
+  ...props
 }: InputFieldProps) {
-  const id = useId();
-  const mergedClassName = `label flex flex-col w-full items-start ${className || ""}`;
+  const internalId = useId();
+  const id = externalId ?? internalId;
+  const mergedLabelClassName = `label flex flex-col w-full items-start ${labelClassName || ""}`;
+  const mergedInputClassName = `input w-full bg-base-300 shadow-sm ${className || ""}`;
 
   return (
-    <label className={mergedClassName}>
+    <label className={mergedLabelClassName} htmlFor={id}>
       {label}
       <input
+        {...props}
         id={id}
         type="text"
-        className="input w-full bg-base-300 shadow-sm"
+        className={mergedInputClassName}
         placeholder={placeholder}
-        value={value}
-        onChange={onChange}
       />
     </label>
   );

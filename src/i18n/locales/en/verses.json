@@ -29,6 +29,10 @@
         "label": "Verse Text",
         "placeholder": "Type the verse text here..."
       }
+    },
+    "buttons": {
+      "save": "Save Verse",
+      "cancel": "Cancel"
     }
   }
 }

@@ -1,33 +1,35 @@
-import { type ChangeEvent, type ReactNode, useId } from "react";
+import { type ComponentProps, type ReactNode, useId } from "react";
 
-interface SelectFieldProps {
+interface SelectFieldProps extends ComponentProps<"select"> {
   label: string;
   placeholder: string;
-  value: string;
   children: ReactNode;
-  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
-  className?: string;
+  labelClassName?: string;
 }
 
 export default function SelectField({
+  id: externalId,
   label,
   placeholder,
-  value,
-  children,
-  onChange,
   className,
+  labelClassName,
+  defaultValue,
+  children,
+  ...props
 }: SelectFieldProps) {
-  const id = useId();
-  const mergedClassName = `label flex flex-col items-start ${className || ""}`;
+  const internalId = useId();
+  const id = externalId ?? internalId;
+  const mergedLabelClassName = `label flex flex-col items-start ${labelClassName || ""}`;
+  const mergedSelectClassName = `select w-full bg-base-300 shadow-sm ${className || ""}`;
 
   return (
-    <label className={mergedClassName}>
+    <label className={mergedLabelClassName} htmlFor={id}>
       <span className="text-sm font-bold">{label.toUpperCase()}</span>
       <select
+        {...props}
         id={id}
-        className="select w-full bg-base-300 shadow-sm"
-        value={value}
-        onChange={onChange}
+        className={mergedSelectClassName}
+        defaultValue={defaultValue ?? ""}
       >
         <option disabled={true} value="">
           {placeholder}

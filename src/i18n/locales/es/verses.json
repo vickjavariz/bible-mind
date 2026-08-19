@@ -29,6 +29,10 @@
         "label": "Texto del versículo",
         "placeholder": "Escribe aquí el texto del versículo..."
       }
+    },
+    "buttons": {
+      "save": "Guardar versículo",
+      "cancel": "Cancelar"
     }
   }
 }
